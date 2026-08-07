@@ -207,9 +207,12 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
 
 .info-cards {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
+
+.large { grid-column: span 2; }
+.full { grid-column: 1 / -1; }
 
 .card {
     display: flex;
@@ -228,6 +231,8 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
     border-bottom: 1px solid var(--border);
     text-align: start;
 }
+
+/* ÖĞRENCİ BİLGİ */
 
 .info-grid {
     display: grid;
@@ -287,6 +292,91 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
     border: 1px solid var(--border);
     border-radius: 50%;
     border-collapse: collapse;
+}
+
+/* GENEL ORT. */
+
+.gpa {
+    margin-left: 30px;
+}
+
+.gpa-text {
+    align-items: baseline;
+    display: flex;
+    margin-top: 20px;
+}
+
+.gpa-text h1 {
+    color: var(--active-menu-text);
+    font-size: xx-large;
+    margin: 0
+}
+
+.gpa-text p {
+    margin: 0;
+}
+
+.gpa-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.graphs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    align-items: baseline;
+}
+
+.box-1 {
+    width: 48px;
+    height: 72px;
+    background-color: var(--body-bg);
+
+    border-radius: 6px 6px 3px 3px;
+}
+
+.box-2 {
+    width: 48px;
+    height: 80px;
+    background-color: var(--body-bg);
+
+    border-radius: 6px 6px 3px 3px;
+}
+
+.box-3 {
+    width: 48px;
+    height: 90px;
+    background-color: var(--links);
+    box-shadow: var(--border-shadow);
+
+    border-radius: 6px 6px 3px 3px;
+}
+
+.graph-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: baseline;
+}
+
+.graph-info p {
+    text-align: center;
+}
+
+/* DERSLER*/
+
+/* ANKETLER*/
+
+.surveys {
+    margin-right: 30px;
+}
+
+/* DUYURULAR */
+
+.announcements {
+    margin: 0 30px;
 }
 
 /* BUTONLAR */
