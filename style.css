@@ -38,23 +38,57 @@ body.dark-theme {
     --sw-dot: #9397ab;
 }
 
+*, *::before, *::after { box-sizing: border-box; }
+
 body { 
     font-family: Inter, system-ui, sans-serif;
     margin: 0; 
     background: var(--body-bg);
+    color: var(--body-text);
 
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 268px 1fr;
+    transition: grid-template-columns .5s ease;
+    overflow-x: hidden;
 }
 
+body.dark-theme .dot { left: 16px; }
+
+body.sidebar-kapali .nav-yazi,
+body.sidebar-kapali .rozet,
+body.sidebar-kapali .ph-caret-down,
+body.sidebar-kapali .profile p,
+body.sidebar-kapali .profile h3,
+body.sidebar-kapali .tema-yazi,
+body.sidebar-kapali .switch { display: none; }
+
+body.sidebar-kapali .nav-item,
+body.sidebar-kapali .tema-btn {
+    justify-content: center;
+    margin: 0 12px 12px 12px;        
+    padding: 12px 0;
+}
+
+body.sidebar-kapali .pfp { width: 40px; height: 40px; }
+body.sidebar-kapali .profile { margin: 10px 8px; }
+body.sidebar-kapali .nav-items { padding-left: 0; }
+
+body.sidebar-kapali { grid-template-columns: 84px 1fr; }
+
+h1, h2, h3, h4, h5, h6 { color: var(--title-text); }
 
 /* SİDEBAR */
 .sidebar {
-    display: grid;
-    grid-template-rows: 2fr 3fr 1fr;
+    position: sticky;
+    top: 0;
+    align-self: start;
 
+    display: grid;
+    grid-template-rows: auto 1fr auto;  
     height: 100vh;
     background: var(--sidebar-bg);
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .profile {
@@ -81,6 +115,8 @@ body {
 .sidebar-nav {
     display: flex;
     flex-direction: column;
+    overflow-y: auto; 
+    overflow-x: hidden;
 }
 
 .nav-items {
@@ -88,6 +124,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding-left: 0;
+    margin: 0;
 }
 
 .nav-items a {
@@ -96,10 +134,16 @@ body {
 }
 
 .nav-item {
-    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 14px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin: 0 12px;    
+    font-size: 14px;
 }
+
+.nav-item i { font-size: 20px; }
 
 .nav-item:hover {
     color: var(--active-menu-text);
@@ -154,6 +198,7 @@ body.koyu .dot { left: 16px; }
 .scene {
     display: grid;
     grid-template-rows: 1fr 10fr;
+    min-width: 0;
 }
 
 /* HEADER */
@@ -197,7 +242,8 @@ header {
     border: 1px solid var(--border);
     width: 48px;
     height: 48px;
-    border-radius: 12px
+    border-radius: 12px;
+    color: var(--body-text);
 }
 
 /* MAİN */
@@ -209,6 +255,7 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    min-width: 0;
 }
 
 .large { grid-column: span 2; }
@@ -274,7 +321,7 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
     margin: 4px 0 0; 
     font-size: 14.5px; 
     font-weight: 600; 
-    color: var(--text); 
+    color: var(--title-text); 
 }
 
 .ogrenci-info {
@@ -331,11 +378,39 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
 }
 
 .gpa-graph {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.bar-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    justify-content: end;
 }
+
+.bar {
+    width: 48px;
+    background: var(--border);
+    border-radius: 6px 6px 3px 3px;
+}
+
+.bar.current {
+    background: linear-gradient(180deg, #968ae0, #5d5294);
+    box-shadow: 0 0 16px rgba(121,108,191,.3);
+}
+
+body.dark-theme .bar.current {
+    background: linear-gradient(180deg, #b5abfc, #796cbf);
+    box-shadow: 0 0 18px rgba(145,132,217,.45);
+}
+
+.bar-label { font-size: 11px; color: var(--secondary-text); margin: 10px 0 0; }
+.bar-value { font-size: 12px; font-weight: 600; color: var(--title-text); margin: 2px 0 0; }
+.bar-col:last-child .bar-value { color: var(--active-menu-text); }
 
 .graphs {
     display: grid;
@@ -495,6 +570,7 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
     border-radius: 12px;
     padding: 10px 20px;
     width: auto;
+    color: var(--body-text);
 }
 
 .meet-btn:hover {
@@ -505,3 +581,11 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
 a {
     text-decoration: none;
 }
+
+.ph {
+    font-family: "Phosphor" !important;
+    font-variant-emoji: text;
+    font-style: normal;
+}
+
+main > p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text); }

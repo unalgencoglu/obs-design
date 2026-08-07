@@ -22,13 +22,13 @@
 
                 <nav class="sidebar-nav">
                     <ul class="nav-items">
-                        <a href="index.html"><li class="nav-item active"><i class="ph ph-house"></i> Anasayfa</li></a>
-                        <a href="#"><li class="nav-item"><i class="ph ph-user"></i> Genel Bilgilerim <i class="ph ph-caret-down"></i></li></a>
-                        <a href="#"><li class="nav-item"><i class="ph ph-book-open"></i> Ders İşlemlerim <i class="ph ph-caret-down"></i></li></a>
-                        <a href="#"><li class="nav-item"><i class="ph ph-clipboard-text"></i> Başvuru İşlemlerim <i class="ph ph-caret-down"></i></li></a>
-                        <a href="#"><li class="nav-item"><i class="ph ph-cloud"></i> Office 365 Kullanımı</li></a>
-                        <a href="#"><li class="nav-item"><i class="ph ph-envelope-simple"></i> Mesajlarım <span class="rozet">10</span></li></a>
-                        <a href="#"><li class="nav-item"><i class="ph ph-chats-circle"></i> Danışman Görüşmelerim</li></a>    
+                        <a href="index.html"><li class="nav-item active"><i class="ph ph-house"></i> <span class="nav-yazi">Anasayfa</span></li></a>
+                        <a href="#"><li class="nav-item"><i class="ph ph-user"></i> <span class="nav-yazi">Genel Bilgilerim</span> <i class="ph ph-caret-down"></i></li></a>
+                        <a href="#"><li class="nav-item"><i class="ph ph-book-open"></i> <span class="nav-yazi">Ders İşlemlerim</span> <i class="ph ph-caret-down"></i></li></a>
+                        <a href="#"><li class="nav-item"><i class="ph ph-clipboard-text"></i> <span class="nav-yazi">Başvuru İşlemlerim</span> <i class="ph ph-caret-down"></i></li></a>
+                        <a href="#"><li class="nav-item"><i class="ph ph-cloud"></i> <span class="nav-yazi">Office 365 Kullanımı</span></li></a>
+                        <a href="#"><li class="nav-item"><i class="ph ph-envelope-simple"></i> <span class="nav-yazi">Mesajlarım</span> <span class="rozet">10</span></li></a>
+                        <a href="#"><li class="nav-item"><i class="ph ph-chats-circle"></i> <span class="nav-yazi">Danışman Görüşmelerim</span></li></a>
                     </ul>
                 </nav>
 
@@ -43,7 +43,7 @@
         <div class="scene">
             <header>
                 <div class="logo">
-                    <button class="header-btn"><i class="ph ph-list"></i></button>
+                    <button class="header-btn" id="menu-btn"><i class="ph ph-list"></i></button>
                     <img src="nku-logo.jpg" alt="Tekirdağ Namık Kemal Üniversitesi" class="logo-img">
                     <div class="header-text">
                         <h4>Tekirdağ Namık Kemal Üniversitesi</h4>
@@ -114,25 +114,20 @@
                         </div>
 
                         <div class="gpa-graph">
-                            <div class="graphs">
-                                <div class="box-1"></div>
-                                <div class="box-2"></div>
-                                <div class="box-3"></div>
+                            <div class="bar-col">
+                                <div class="bar" style="height:72px"></div>
+                                <p class="bar-label">1. Yarıyıl</p>
+                                <p class="bar-value">2.45</p>
                             </div>
-
-                            <div class="graph-info">
-                                <div>
-                                    <p>1. Yarıyıl</p>
-                                    <p>2.45</p>
-                                </div>
-                                <div>
-                                    <p>2. Yarıyıl</p>
-                                    <p>2.61</p>
-                                </div>
-                                <div>
-                                    <p>3. Yarıyıl</p>
-                                    <p>2.73</p>
-                                </div>
+                            <div class="bar-col">
+                                <div class="bar" style="height:80px"></div>
+                                <p class="bar-label">2. Yarıyıl</p>
+                                <p class="bar-value">2.61</p>
+                            </div>
+                            <div class="bar-col">
+                                <div class="bar current" style="height:90px"></div>
+                                <p class="bar-label">3. Yarıyıl</p>
+                                <p class="bar-value">2.73</p>
                             </div>
                         </div>
                     </section>
