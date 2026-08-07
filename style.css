@@ -373,6 +373,11 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
     align-items: center;
 }
 
+.lesson-info-card a,
+.survey-card a {
+    font-size: small;
+}
+
 .lesson-info-card p { color: var(--active-menu-text); margin: 0; }
 .lesson-info-card p:hover { cursor: pointer; }
 .lesson-info-list h1 { font-size: smaller; margin: 0; }
@@ -402,6 +407,15 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
     margin-right: 30px;
 }
 
+.survey-card {
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.survey-card h1 { font-size: small; margin: 0;}
+.survey-card p { font-size: small; margin: 0;}
+
 /* DUYURULAR */
 
 .announcements {
@@ -428,4 +442,8 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
 .meet-btn:hover {
     background: var(--active-menu-bg);
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
