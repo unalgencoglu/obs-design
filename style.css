@@ -367,6 +367,35 @@ main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text
 
 /* DERSLER*/
 
+.lesson-info-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.lesson-info-card p { color: var(--active-menu-text); margin: 0; }
+.lesson-info-card p:hover { cursor: pointer; }
+.lesson-info-list h1 { font-size: smaller; margin: 0; }
+.lesson-info-list p { font-size: smaller; margin: 0; }
+
+.lesson-info-list dt {
+    background: var(--active-menu-bg);
+    border-radius: 6px;
+    color: var(--links);
+    padding: 5px 5px;
+    margin: 15px 20px 15px 0;
+    font-size: small;
+    text-align: center;
+    font-weight: 500;
+}
+
+.lesson-info-list dd {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 0 10px;
+}
+
 /* ANKETLER*/
 
 .surveys {
