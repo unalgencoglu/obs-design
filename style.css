@@ -199,6 +199,63 @@ header {
     border-radius: 12px
 }
 
+/* MAİN */
+
+main h1 { font-size: x-large; margin: 10px 0 0 30px; }
+main p { font-size: small; margin: 10px 0 20px 30px; color: var(--secondary-text);}
+
+.ogrenci-info {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin: 0 30px;
+    padding: 10px 30px 30px 30px;
+}
+
+.ogrenci-info h4 {
+    font-size: small;
+    color: var(--secondary-text);
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+    text-align: start;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.info-table {
+    display: grid;
+    gap: 18px 32px;
+    margin: 0;
+}
+
+.info-table dt { 
+    font-size: 11px; 
+    font-weight: 500; 
+    letter-spacing: .06em;
+    text-transform: uppercase; 
+    color: var(--secondary-text); 
+    
+}
+
+.info-table dd { 
+    margin: 4px 0 0; 
+    font-size: 14.5px; 
+    font-weight: 600; 
+    color: var(--text); 
+}
+
+
+
+/* BUTONLAR */
+
 .header-btn i { font-size: 24px; }
 
 .header-btn:hover {
